@@ -1,6 +1,6 @@
-//! Thermal conductivity (base unit watt per meter kelvin, kg · m · s⁻³ · K⁻¹).
+//! Thermal conductance (base unit watt per kelvin, kg · m² · s⁻³ · K⁻¹).
 //!
-//! Thermal conductivity has the same kind as [temperature interval][ti], as this quantity relates
+//! Thermal conductance has the same kind as [temperature interval][ti], as this quantity relates
 //! to change of temperature. Not of kind `TemperatureKind`, used by [thermodynamic
 //! temperature][tt]. See [thermodynamic temperature][tt] for a full explanation.
 //!
@@ -8,12 +8,12 @@
 //! [tt]: ../thermodynamic_temperature/index.html
 
 quantity! {
-    /// Thermal conductivity (base unit watt per meter kelvin, kg · m · s⁻³ · K⁻¹).
-    quantity: ThermalConductivity; "thermal conductivity";
-    /// Dimension of thermal conductivity, LMT⁻³Th⁻¹ (base unit watt per meter kelvin, kg · m · s⁻³
+    /// Thermal conductance (base unit watt per kelvin, kg · m² · s⁻³ · K⁻¹).
+    quantity: ThermalConductance; "thermal conductance";
+    /// Dimension of thermal conductance, LM²T⁻³Th⁻¹ (base unit watt per kelvin, kg · m² · s⁻³
     /// · K⁻¹).
     dimension: ISQ<
-        P1,     // length
+        P2,     // length
         P1,     // mass
         N3,     // time
         Z0,     // electric current
@@ -21,107 +21,107 @@ quantity! {
         Z0,     // amount of substance
         Z0>;    // luminous intensity
     units {
-        @yottagram_meter_per_second_cubed_kelvin: prefix!(yotta) / prefix!(kilo); "Yg · m/(s³ · K)",
-            "yottagram meter per second cubed kelvin", "yottagrams meter per second cubed kelvin";
-        @zettagram_meter_per_second_cubed_kelvin: prefix!(zetta) / prefix!(kilo); "Zg · m/(s³ · K)",
-            "zettagram meter per second cubed kelvin", "zettagrams meter per second cubed kelvin";
-        @exagram_meter_per_second_cubed_kelvin: prefix!(exa) / prefix!(kilo); "Eg · m/(s³ · K)",
-            "exagram meter per second cubed kelvin", "exagrams meter per second cubed kelvin";
-        @petagram_meter_per_second_cubed_kelvin: prefix!(peta) / prefix!(kilo); "Pg · m/(s³ · K)",
-            "petagram meter per second cubed kelvin", "petagrams meter per second cubed kelvin";
-        @teragram_meter_per_second_cubed_kelvin: prefix!(tera) / prefix!(kilo); "Tg · m/(s³ · K)",
-            "teragram meter per second cubed kelvin", "teragrams meter per second cubed kelvin";
-        @gigagram_meter_per_second_cubed_kelvin: prefix!(giga) / prefix!(kilo); "Gg · m/(s³ · K)",
-            "gigagram meter per second cubed kelvin", "gigagrams meter per second cubed kelvin";
-        @megagram_meter_per_second_cubed_kelvin: prefix!(mega) / prefix!(kilo); "Mg · m/(s³ · K)",
-            "megagram meter per second cubed kelvin", "megagrams meter per second cubed kelvin";
-        /// Derived unit of thermal conductivity in base units. Equivalent to W/(m · K).
-        @kilogram_meter_per_second_cubed_kelvin: prefix!(kilo) / prefix!(kilo); "kg · m/(s³ · K)",
-            "kilogram meter per second cubed kelvin", "kilograms meter per second cubed kelvin";
-        @hectogram_meter_per_second_cubed_kelvin: prefix!(hecto) / prefix!(kilo); "hg · m/(s³ · K)",
-            "hectogram meter per second cubed kelvin", "hectograms meter per second cubed kelvin";
-        @decagram_meter_per_second_cubed_kelvin: prefix!(deca) / prefix!(kilo); "dag · m/(s³ · K)",
-            "decagram meter per second cubed kelvin", "decagrams meter per second cubed kelvin";
+        @yottagram_meter_per_second_cubed_kelvin: prefix!(yotta) / prefix!(kilo); "Yg · m²/(s³ · K)",
+            "yottagram meter squared per second cubed kelvin", "yottagrams meter squared per second cubed kelvin";
+        @zettagram_meter_per_second_cubed_kelvin: prefix!(zetta) / prefix!(kilo); "Zg · m²/(s³ · K)",
+            "zettagram meter squared per second cubed kelvin", "zettagrams meter squared per second cubed kelvin";
+        @exagram_meter_per_second_cubed_kelvin: prefix!(exa) / prefix!(kilo); "Eg · m²/(s³ · K)",
+            "exagram meter squared per second cubed kelvin", "exagrams meter squared per second cubed kelvin";
+        @petagram_meter_per_second_cubed_kelvin: prefix!(peta) / prefix!(kilo); "Pg · m²/(s³ · K)",
+            "petagram meter squared per second cubed kelvin", "petagrams meter squared per second cubed kelvin";
+        @teragram_meter_per_second_cubed_kelvin: prefix!(tera) / prefix!(kilo); "Tg · m²/(s³ · K)",
+            "teragram meter squared per second cubed kelvin", "teragrams meter squared per second cubed kelvin";
+        @gigagram_meter_per_second_cubed_kelvin: prefix!(giga) / prefix!(kilo); "Gg · m²/(s³ · K)",
+            "gigagram meter squared per second cubed kelvin", "gigagrams meter squared per second cubed kelvin";
+        @megagram_meter_per_second_cubed_kelvin: prefix!(mega) / prefix!(kilo); "Mg · m²/(s³ · K)",
+            "megagram meter squared per second cubed kelvin", "megagrams meter squared per second cubed kelvin";
+        /// Derived unit of thermal conductance in base units. Equivalent to W/K.
+        @kilogram_meter_per_second_cubed_kelvin: prefix!(kilo) / prefix!(kilo); "kg · m²/(s³ · K)",
+            "kilogram meter squared per second cubed kelvin", "kilograms meter squared per second cubed kelvin";
+        @hectogram_meter_per_second_cubed_kelvin: prefix!(hecto) / prefix!(kilo); "hg · m²/(s³ · K)",
+            "hectogram meter squared per second cubed kelvin", "hectograms meter squared per second cubed kelvin";
+        @decagram_meter_per_second_cubed_kelvin: prefix!(deca) / prefix!(kilo); "dag · m²/(s³ · K)",
+            "decagram meter squared per second cubed kelvin", "decagrams meter squared per second cubed kelvin";
         @gram_meter_per_second_cubed_kelvin: prefix!(none) / prefix!(kilo); "g · m/(s³ · K)",
             "gram meter per second cubed kelvin", "grams meter per second cubed kelvin";
-        @decigram_meter_per_second_cubed_kelvin: prefix!(deci) / prefix!(kilo); "dg · m/(s³ · K)",
-            "decigram meter per second cubed kelvin", "decigrams meter per second cubed kelvin";
-        @centigram_meter_per_second_cubed_kelvin: prefix!(centi) / prefix!(kilo); "cg · m/(s³ · K)",
-            "centigram meter per second cubed kelvin", "centigrams meter per second cubed kelvin";
-        @milligram_meter_per_second_cubed_kelvin: prefix!(milli) / prefix!(kilo); "mg · m/(s³ · K)",
-            "milligram meter per second cubed kelvin", "milligrams meter per second cubed kelvin";
+        @decigram_meter_per_second_cubed_kelvin: prefix!(deci) / prefix!(kilo); "dg · m²/(s³ · K)",
+            "decigram meter squared per second cubed kelvin", "decigrams meter squared per second cubed kelvin";
+        @centigram_meter_per_second_cubed_kelvin: prefix!(centi) / prefix!(kilo); "cg · m²/(s³ · K)",
+            "centigram meter squared per second cubed kelvin", "centigrams meter squared per second cubed kelvin";
+        @milligram_meter_per_second_cubed_kelvin: prefix!(milli) / prefix!(kilo); "mg · m²/(s³ · K)",
+            "milligram meter squared per second cubed kelvin", "milligrams meter squared per second cubed kelvin";
         @microgram_meter_per_second_cubed_kelvin: prefix!(micro) / prefix!(kilo); "µg · m/(s³ · K)",
-            "microgram meter per second cubed kelvin", "micrograms meter per second cubed kelvin";
-        @nanogram_meter_per_second_cubed_kelvin: prefix!(nano) / prefix!(kilo); "ng · m/(s³ · K)",
-            "nanogram meter per second cubed kelvin", "nanograms meter per second cubed kelvin";
-        @picogram_meter_per_second_cubed_kelvin: prefix!(pico) / prefix!(kilo); "pg · m/(s³ · K)",
-            "picogram meter per second cubed kelvin", "picograms meter per second cubed kelvin";
-        @femtogram_meter_per_second_cubed_kelvin: prefix!(femto) / prefix!(kilo); "fg · m/(s³ · K)",
-            "femtogram meter per second cubed kelvin", "femtograms meter per second cubed kelvin";
-        @attogram_meter_per_second_cubed_kelvin: prefix!(atto) / prefix!(kilo); "ag · m/(s³ · K)",
-            "attogram meter per second cubed kelvin", "attograms meter per second cubed kelvin";
-        @zeptogram_meter_per_second_cubed_kelvin: prefix!(zepto) / prefix!(kilo); "zg · m/(s³ · K)",
-            "zeptogram meter per second cubed kelvin", "zeptograms meter per second cubed kelvin";
-        @yoctogram_meter_per_second_cubed_kelvin: prefix!(yocto) / prefix!(kilo); "yg · m/(s³ · K)",
-            "yoctogram meter per second cubed kelvin", "yoctograms meter per second cubed kelvin";
+            "microgram meter squared per second cubed kelvin", "micrograms meter squared per second cubed kelvin";
+        @nanogram_meter_per_second_cubed_kelvin: prefix!(nano) / prefix!(kilo); "ng · m²/(s³ · K)",
+            "nanogram meter squared per second cubed kelvin", "nanograms meter squared per second cubed kelvin";
+        @picogram_meter_per_second_cubed_kelvin: prefix!(pico) / prefix!(kilo); "pg · m²/(s³ · K)",
+            "picogram meter squared per second cubed kelvin", "picograms meter squared per second cubed kelvin";
+        @femtogram_meter_per_second_cubed_kelvin: prefix!(femto) / prefix!(kilo); "fg · m²/(s³ · K)",
+            "femtogram meter squared per second cubed kelvin", "femtograms meter squared per second cubed kelvin";
+        @attogram_meter_per_second_cubed_kelvin: prefix!(atto) / prefix!(kilo); "ag · m²/(s³ · K)",
+            "attogram meter squared per second cubed kelvin", "attograms meter squared per second cubed kelvin";
+        @zeptogram_meter_per_second_cubed_kelvin: prefix!(zepto) / prefix!(kilo); "zg · m²/(s³ · K)",
+            "zeptogram meter squared per second cubed kelvin", "zeptograms meter squared per second cubed kelvin";
+        @yoctogram_meter_per_second_cubed_kelvin: prefix!(yocto) / prefix!(kilo); "yg · m²/(s³ · K)",
+            "yoctogram meter squared per second cubed kelvin", "yoctograms meter squared per second cubed kelvin";
 
-        // Thermal conductivity is much more commonly expressed in terms of
-        // power / (length · temperature).
-        @yottawatt_per_meter_kelvin: prefix!(yotta); "YW/(m · K)",
-            "yottawatt per meter kelvin", "yottawatts per meter kelvin";
-        @zettawatt_per_meter_kelvin: prefix!(zetta); "ZW/(m · K)",
-            "zettawatt per meter kelvin", "zettawatts per meter kelvin";
-        @exawatt_per_meter_kelvin: prefix!(exa); "EW/(m · K)",
-            "exawatt per meter kelvin", "exawatts per meter kelvin";
-        @petawatt_per_meter_kelvin: prefix!(peta); "PW/(m · K)",
-            "petawatt per meter kelvin", "petawatts per meter kelvin";
-        @terawatt_per_meter_kelvin: prefix!(tera); "TW/(m · K)",
-            "terawatt per meter kelvin", "terawatts per meter kelvin";
-        @gigawatt_per_meter_kelvin: prefix!(giga); "GW/(m · K)",
-            "gigawatt per meter kelvin", "gigawatts per meter kelvin";
-        @megawatt_per_meter_kelvin: prefix!(mega); "MW/(m · K)",
-            "megawatt per meter kelvin", "megawatts per meter kelvin";
-        @kilowatt_per_meter_kelvin: prefix!(kilo); "kW/(m · K)",
-            "kilowatt per meter kelvin", "kilowatts per meter kelvin";
-        @hectowatt_per_meter_kelvin: prefix!(hecto); "hW/(m · K)",
-            "hectowatt per meter kelvin", "hectowatts per meter kelvin";
-        @decawatt_per_meter_kelvin: prefix!(deca); "daW/(m · K)",
-            "decawatt per meter kelvin", "decawatts per meter kelvin";
-        /// Derived unit of thermal conductivity in derived units. Equivalent to kg · m/(s³ · K).
-        @watt_per_meter_kelvin: prefix!(none); "W/(m · K)",
-            "watt per meter kelvin", "watts per meter kelvin";
-        @deciwatt_per_meter_kelvin: prefix!(deci); "dW/(m · K)",
-            "deciwatt per meter kelvin", "deciwatts per meter kelvin";
-        @centiwatt_per_meter_kelvin: prefix!(centi); "cW/(m · K)",
-            "centiwatt per meter kelvin", "centiwatts per meter kelvin";
-        @milliwatt_per_meter_kelvin: prefix!(milli); "mW/(m · K)",
-            "milliwatt per meter kelvin", "milliwatts per meter kelvin";
-        @microwatt_per_meter_kelvin: prefix!(micro); "µW/(m · K)",
-            "microwatt per meter kelvin", "microwatts per meter kelvin";
-        @nanowatt_per_meter_kelvin: prefix!(nano); "nW/(m · K)",
-            "nanowatt per meter kelvin", "nanowatts per meter kelvin";
-        @picowatt_per_meter_kelvin: prefix!(pico); "pW/(m · K)",
-            "picowatt per meter kelvin", "picowatts per meter kelvin";
-        @femtowatt_per_meter_kelvin: prefix!(femto); "fW/(m · K)",
-            "femtowatt per meter kelvin", "femtowatts per meter kelvin";
-        @attowatt_per_meter_kelvin: prefix!(atto); "aW/(m · K)",
-            "attowatt per meter kelvin", "attowatts per meter kelvin";
-        @zeptowatt_per_meter_kelvin: prefix!(zepto); "zW/(m · K)",
-            "zeptowatt per meter kelvin", "zeptowatts per meter kelvin";
-        @yoctowatt_per_meter_kelvin: prefix!(yocto); "yW/(m · K)",
-            "yoctowatt per meter kelvin", "yoctowatts per meter kelvin";
+        // Thermal conductance is much more commonly expressed in terms of
+        // power / temperature.
+        @yottawatt_per_kelvin: prefix!(yotta); "YW/K",
+            "yottawatt per kelvin", "yottawatts per kelvin";
+        @zettawatt_per_kelvin: prefix!(zetta); "ZW/K",
+            "zettawatt per kelvin", "zettawatts per kelvin";
+        @exawatt_per_kelvin: prefix!(exa); "EW/K",
+            "exawatt per kelvin", "exawatts per kelvin";
+        @petawatt_per_kelvin: prefix!(peta); "PW/K",
+            "petawatt per kelvin", "petawatts per kelvin";
+        @terawatt_per_kelvin: prefix!(tera); "TW/K",
+            "terawatt per kelvin", "terawatts per kelvin";
+        @gigawatt_per_kelvin: prefix!(giga); "GW/K",
+            "gigawatt per kelvin", "gigawatts per kelvin";
+        @megawatt_per_kelvin: prefix!(mega); "MW/K",
+            "megawatt per kelvin", "megawatts per kelvin";
+        @kilowatt_per_kelvin: prefix!(kilo); "kW/K",
+            "kilowatt per kelvin", "kilowatts per kelvin";
+        @hectowatt_per_kelvin: prefix!(hecto); "hW/K",
+            "hectowatt per kelvin", "hectowatts per kelvin";
+        @decawatt_per_kelvin: prefix!(deca); "daW/K",
+            "decawatt per kelvin", "decawatts per kelvin";
+        /// Derived unit of thermal conductance in derived units. Equivalent to kg · m²/(s³ · K).
+        @watt_per_kelvin: prefix!(none); "W/K",
+            "watt per kelvin", "watts per kelvin";
+        @deciwatt_per_kelvin: prefix!(deci); "dW/K",
+            "deciwatt per kelvin", "deciwatts per kelvin";
+        @centiwatt_per_kelvin: prefix!(centi); "cW/K",
+            "centiwatt per kelvin", "centiwatts per kelvin";
+        @milliwatt_per_kelvin: prefix!(milli); "mW/K",
+            "milliwatt per kelvin", "milliwatts per kelvin";
+        @microwatt_per_kelvin: prefix!(micro); "µW/K",
+            "microwatt per kelvin", "microwatts per kelvin";
+        @nanowatt_per_kelvin: prefix!(nano); "nW/K",
+            "nanowatt per kelvin", "nanowatts per kelvin";
+        @picowatt_per_kelvin: prefix!(pico); "pW/K",
+            "picowatt per kelvin", "picowatts per kelvin";
+        @femtowatt_per_kelvin: prefix!(femto); "fW/K",
+            "femtowatt per kelvin", "femtowatts per kelvin";
+        @attowatt_per_kelvin: prefix!(atto); "aW/K",
+            "attowatt per kelvin", "attowatts per kelvin";
+        @zeptowatt_per_kelvin: prefix!(zepto); "zW/K",
+            "zeptowatt per kelvin", "zeptowatts per kelvin";
+        @yoctowatt_per_kelvin: prefix!(yocto); "yW/K",
+            "yoctowatt per kelvin", "yoctowatts per kelvin";
 
         // Celsius for convenience.
-        @kilogram_meter_per_second_cubed_degree_celsius: prefix!(kilo) / prefix!(kilo);
-            "kg · m/(s³ · °C)", "kilogram meter per second cubed degree celsius",
-            "kilograms meter per second cubed degree celsius";
-        @kilowatt_per_meter_degree_celsius: prefix!(kilo); "kW/(m · °C)",
-            "kilowatt per meter degree celsius", "kilowatts per meter degree celsius";
-        /// Derived unit of thermal conductivity in derived units. Equivalent to kg · m/(s³ · K).
-        @watt_per_meter_degree_celsius: prefix!(none); "W/(m · °C)",
-            "watt per meter degree celsius", "watts per meter degree celsius";
-        @milliwatt_per_meter_degree_celsius: prefix!(milli); "mW/(m · °C)",
-            "milliwatt per meter degree celsius", "milliwatts per meter degree celsius";
+        @kilogram_meter_squared_per_second_cubed_degree_celsius: prefix!(kilo) / prefix!(kilo);
+            "kg · m²/(s³ · °C)", "kilogram meter squared per second cubed degree celsius",
+            "kilograms meter squared per second cubed degree celsius";
+        @kilowatt_per_degree_celsius: prefix!(kilo); "kW/°C",
+            "kilowatt per degree celsius", "kilowatts per degree celsius";
+        /// Derived unit of thermal conductance in derived units. Equivalent to kg · m²/(s³ · K).
+        @watt_per_meter_degree_celsius: prefix!(none); "W/°C",
+            "watt per degree celsius", "watts per degree celsius";
+        @milliwatt_per_degree_celsius: prefix!(milli); "mW/°C",
+            "milliwatt per degree celsius", "milliwatts per degree celsius";
     }
 }
 
@@ -134,14 +134,14 @@ mod tests {
         use crate::si::power as p;
         use crate::si::quantities::*;
         use crate::si::temperature_interval as ti;
-        use crate::si::thermal_conductivity as tc;
+        use crate::si::thermal_conductance as tc;
         use crate::si::time as t;
         use crate::tests::Test;
 
         #[test]
         fn check_dimension() {
-            let _: ThermalConductivity<V> = Mass::new::<m::kilogram>(V::one())
-                * Length::new::<l::meter>(V::one())
+            let _: ThermalConductance<V> = Mass::new::<m::kilogram>(V::one())
+                * Length::new::<l::meter>(V::one()) * Length::new::<l::meter>(V::one())
                 / (Time::new::<t::second>(V::one())
                     * Time::new::<t::second>(V::one())
                     * Time::new::<t::second>(V::one())
@@ -173,16 +173,16 @@ mod tests {
             test::<m::yoctogram, ti::kelvin, tc::yoctogram_meter_per_second_cubed_kelvin>();
 
             test::<m::kilogram, ti::degree_celsius,
-                tc::kilogram_meter_per_second_cubed_degree_celsius>();
+                tc::kilogram_meter_squared_per_second_cubed_degree_celsius>();
 
             fn test<
                 M: m::Conversion<V>,
                 TI: ti::Conversion<V>,
                 TC: tc::Conversion<V>>()
             {
-                Test::assert_approx_eq(&ThermalConductivity::new::<TC>(V::one()),
+                Test::assert_approx_eq(&ThermalConductance::new::<TC>(V::one()),
                     &(Mass::new::<M>(V::one())
-                        * Length::new::<l::meter>(V::one())
+                        * Length::new::<l::meter>(V::one()) * Length::new::<l::meter>(V::one())
                         / (Time::new::<t::second>(V::one())
                             * Time::new::<t::second>(V::one())
                             * Time::new::<t::second>(V::one())
@@ -192,33 +192,33 @@ mod tests {
 
         #[test]
         fn check_power_per_length_ti_units() {
-            test::<p::yottawatt, l::meter, ti::kelvin, tc::yottawatt_per_meter_kelvin>();
-            test::<p::zettawatt, l::meter, ti::kelvin, tc::zettawatt_per_meter_kelvin>();
-            test::<p::exawatt, l::meter, ti::kelvin, tc::exawatt_per_meter_kelvin>();
-            test::<p::petawatt, l::meter, ti::kelvin, tc::petawatt_per_meter_kelvin>();
-            test::<p::terawatt, l::meter, ti::kelvin, tc::terawatt_per_meter_kelvin>();
-            test::<p::gigawatt, l::meter, ti::kelvin, tc::gigawatt_per_meter_kelvin>();
-            test::<p::megawatt, l::meter, ti::kelvin, tc::megawatt_per_meter_kelvin>();
-            test::<p::kilowatt, l::meter, ti::kelvin, tc::kilowatt_per_meter_kelvin>();
-            test::<p::hectowatt, l::meter, ti::kelvin, tc::hectowatt_per_meter_kelvin>();
-            test::<p::decawatt, l::meter, ti::kelvin, tc::decawatt_per_meter_kelvin>();
-            test::<p::watt, l::meter, ti::kelvin, tc::watt_per_meter_kelvin>();
-            test::<p::deciwatt, l::meter, ti::kelvin, tc::deciwatt_per_meter_kelvin>();
-            test::<p::centiwatt, l::meter, ti::kelvin, tc::centiwatt_per_meter_kelvin>();
-            test::<p::milliwatt, l::meter, ti::kelvin, tc::milliwatt_per_meter_kelvin>();
-            test::<p::microwatt, l::meter, ti::kelvin, tc::microwatt_per_meter_kelvin>();
-            test::<p::nanowatt, l::meter, ti::kelvin, tc::nanowatt_per_meter_kelvin>();
-            test::<p::picowatt, l::meter, ti::kelvin, tc::picowatt_per_meter_kelvin>();
-            test::<p::femtowatt, l::meter, ti::kelvin, tc::femtowatt_per_meter_kelvin>();
-            test::<p::attowatt, l::meter, ti::kelvin, tc::attowatt_per_meter_kelvin>();
-            test::<p::zeptowatt, l::meter, ti::kelvin, tc::zeptowatt_per_meter_kelvin>();
-            test::<p::yoctowatt, l::meter, ti::kelvin, tc::yoctowatt_per_meter_kelvin>();
+            test::<p::yottawatt, l::meter, ti::kelvin, tc::yottawatt_per_kelvin>();
+            test::<p::zettawatt, l::meter, ti::kelvin, tc::zettawatt_per_kelvin>();
+            test::<p::exawatt, l::meter, ti::kelvin, tc::exawatt_per_kelvin>();
+            test::<p::petawatt, l::meter, ti::kelvin, tc::petawatt_per_kelvin>();
+            test::<p::terawatt, l::meter, ti::kelvin, tc::terawatt_per_kelvin>();
+            test::<p::gigawatt, l::meter, ti::kelvin, tc::gigawatt_per_kelvin>();
+            test::<p::megawatt, l::meter, ti::kelvin, tc::megawatt_per_kelvin>();
+            test::<p::kilowatt, l::meter, ti::kelvin, tc::kilowatt_per_kelvin>();
+            test::<p::hectowatt, l::meter, ti::kelvin, tc::hectowatt_per_kelvin>();
+            test::<p::decawatt, l::meter, ti::kelvin, tc::decawatt_per_kelvin>();
+            test::<p::watt, l::meter, ti::kelvin, tc::watt_per_kelvin>();
+            test::<p::deciwatt, l::meter, ti::kelvin, tc::deciwatt_per_kelvin>();
+            test::<p::centiwatt, l::meter, ti::kelvin, tc::centiwatt_per_kelvin>();
+            test::<p::milliwatt, l::meter, ti::kelvin, tc::milliwatt_per_kelvin>();
+            test::<p::microwatt, l::meter, ti::kelvin, tc::microwatt_per_kelvin>();
+            test::<p::nanowatt, l::meter, ti::kelvin, tc::nanowatt_per_kelvin>();
+            test::<p::picowatt, l::meter, ti::kelvin, tc::picowatt_per_kelvin>();
+            test::<p::femtowatt, l::meter, ti::kelvin, tc::femtowatt_per_kelvin>();
+            test::<p::attowatt, l::meter, ti::kelvin, tc::attowatt_per_kelvin>();
+            test::<p::zeptowatt, l::meter, ti::kelvin, tc::zeptowatt_per_kelvin>();
+            test::<p::yoctowatt, l::meter, ti::kelvin, tc::yoctowatt_per_kelvin>();
 
             test::<p::kilowatt, l::meter, ti::degree_celsius,
-                tc::kilowatt_per_meter_degree_celsius>();
+                tc::kilowatt_per_degree_celsius>();
             test::<p::watt, l::meter, ti::degree_celsius, tc::watt_per_meter_degree_celsius>();
             test::<p::milliwatt, l::meter, ti::degree_celsius,
-                tc::milliwatt_per_meter_degree_celsius>();
+                tc::milliwatt_per_degree_celsius>();
 
             fn test<
                 P: p::Conversion<V>,
@@ -226,9 +226,9 @@ mod tests {
                 TI: ti::Conversion<V>,
                 TC: tc::Conversion<V>>()
             {
-                Test::assert_approx_eq(&ThermalConductivity::new::<TC>(V::one()),
+                Test::assert_approx_eq(&ThermalConductance::new::<TC>(V::one()),
                     &(Power::new::<P>(V::one())
-                        / (Length::new::<L>(V::one()) * TemperatureInterval::new::<TI>(V::one()))));
+                        / TemperatureInterval::new::<TI>(V::one())));
             }
         }
     }
