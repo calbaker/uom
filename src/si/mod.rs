@@ -141,6 +141,7 @@ system! {
         temperature_gradient::TemperatureGradient,
         temperature_interval::TemperatureInterval,
         thermal_conductance::ThermalConductance,
+        thermal_capacitance::ThermalCapacitance,
         thermal_conductivity::ThermalConductivity,
         thermodynamic_temperature::ThermodynamicTemperature,
         time::Time,
